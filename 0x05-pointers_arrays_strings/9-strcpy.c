@@ -1,32 +1,35 @@
-#include "main.h"
+ #include "main.h"
 
 /**
- * char *_strcpy - a function that copies the string pointed by src
- * @dest: copy to
- * @src: copy from
- * Return: string
+ * puts_half - prints half of a string
+ * followed by a new line
+ * @str: string to be printed
  */
-char *_strcpy(char *dest, char *src)
+void puts_half(char *str)
 {
-	int i = 0;
-	int x = 0;
+	int len, n, i;
 
-	while (*(src + i) i ='\0')
-	{
-		i++;
-	}  
-	for  (:x<i,x++)
-        {
-		int i;
+	len = 0;
 
-		for (i=0;i<(n-1); i++)
+	while (str[len] != '\0')
 	{
-		printf("%d,", a[i]);
+		len++;
+	}
+
+	if (len % 2 == 0)
+	{
+		for (i = len / 2; str[i] != '\0'; i++)
 		{
-			if(i ==(n-1))
-			}
-		            printf("%d", a(n-1);
-                        }
-                                 printf("\n");
+			_putchar(str[i]);
+		}
+	} else if (len % 2)
+	{
+		for (n = (len - 1) / 2; n < len - 1; n++)
+		{
+			_putchar(str[n + 1]);
+		}
+	}
+	_putchar('\n');
 }
+
 

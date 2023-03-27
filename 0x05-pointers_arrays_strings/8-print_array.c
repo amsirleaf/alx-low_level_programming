@@ -1,19 +1,26 @@
 #include "main.h"
+
 /**
- * print_array - a function that print n elements of an array
- * @a:array name
- * @n: is the numberof elements of the array to be printed 
- * Retun a and n input
+ * puts2 - prints one char out of 2 of a string
+ * followed by a new line
+ * @str: string to print the chars from
  */
-void point_arry(int *a,int n)
+void puts2(char *str)
 {
-	int i;
-	for (i=0; i<(n-1);i++);
+	int len, i;
+
+	len = 0;
+
+	while (str[len] != '\0')
 	{
-		printf('%d,",a[i]);
-		if (i==(n-1))
-		{
-			printf("%d", a[n-1]);
-		{
-			printf("\n");
+		len++;
+	}
+
+	for (i = 0; i < len; i += 2)
+	{
+		_putchar(str[i]);
+	}
+
+	_putchar('\n');
 }
+
