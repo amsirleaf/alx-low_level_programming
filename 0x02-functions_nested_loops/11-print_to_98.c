@@ -1,14 +1,38 @@
-#include <unistd.h>
+#include "holberton.h"
+#include <stdio.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * print_to_98 - count the natural numbers from n to 98.
+ * @n: value to count from.
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
+void print_to_98(int n)
 {
-	return (write(1, &c, 1));
+	int i;
+
+	if (n == 98)
+	{
+		printf("98");
+	}
+	else if (n < 98)
+	{
+		for (i = n ; i <= 98 ; i++)
+		{
+			printf("%d", i);
+			if (i < 98)
+				printf(", ");
+		}
+	}
+	else if (n > 98)
+	{
+		for (i = n ; i >= 98 ; i--)
+		{
+			printf("%d", i);
+			if (i > 98)
+				printf(", ");
+
+		}
+	}
+	printf("\n");
 }
 
